@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio De Victor Mendoza Para Una Página de Documentación Técnica</title>
+  </head>
+  <body>
+    <div class="container">
+    <nav id="navbar">
+      <header>
+        <h1>Documentación General HTML</h1>
+      </header>
+      <a class="nav-link" href="#introducción">Introducción</a>
+      <a class="nav-link" href="#estructura_básica_de_un_documento_html">Estructura Básica de un Documento HTML</a>
+      <a class="nav-link" href="#elementos_semánticos">Elementos Semánticos</a>
+      <a class="nav-link" href="#listas">Listas</a>
+      <a class="nav-link" href="#enlaces_e_imágenes">Enlaces e Imágenes</a>
+      <a class="nav-link" href="#formularios">Formularios</a>
+      <a class="nav-link" href="#tablas">Tablas</a>
+      <a class="nav-link" href="#accesibilidad_y_semántica">Accesibilidad y Semántica</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introducción">
+        <header>Introducción</header>
+        <p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar para la creación de páginas web. Define la estructura y el significado del contenido en una página web, permitiendo a los navegadores web interpretar y mostrar el contenido de manera adecuada.</p>
+        <P> Esta documentación proporciona una visión general de los conceptos clave y prácticas recomendadas en HTML, desde la estructura básica hasta la accesibilidad y semántica, para ayudar a los desarrolladores a crear contenido web bien estructurado y fácil de entender tanto para los navegadores como para los usuarios.</P>
+      </section>
+      <section class="main-section" id="estructura_básica_de_un_documento_html">
+        <header>Estructura Básica de un Documento HTML</header>
+        <p>La estructura básica de un documento HTML consta de elementos que definen la información y la presentación de la página web.</p>
+        <pre><code>
+  &lt;!DOCTYPE html&gt;
+   &lt;html&gt;
+     &lt;head&gt;
+      &lt;title>Título de la Página&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+      &lt;!-- Contenido de la página --&gt;
+     &lt;/body&gt;
+   &lt;/html&gt;
+  </code></pre>
+        <p>A continuación, se desglosa el ejemplo:</p>
+        <ul>
+          <li>&lt;!DOCTYPE html&gt;: Esta declaración de tipo de documento (doctype) es la primera línea de cualquier documento HTML5 y le indica al navegador que el documento debe interpretarse como HTML5.</li>
+          <li>&lt;html&gt;: Este es el elemento raíz de una página web y contiene todo el contenido visible y oculto de la página.</li>
+          <li>&lt;head&gt;: El elemento &lt;head> contiene metainformación sobre el documento, como el título de la página, enlaces a hojas de estilo (CSS), scripts de JavaScript, y otras configuraciones que no se muestran directamente en la página.</li>
+          <li>&lt;title&gt;: El elemento &lt;title> define el título de la página web, que se muestra en la barra de título del navegador y en los resultados de búsqueda.</li>
+          <li>&lt;body&gt;: El elemento &lt;body> contiene todo el contenido principal de la página web que se muestra al usuario, como texto, imágenes, enlaces, formularios, etc.
+Esta estructura básica es la base sobre la cual se construyen todas las páginas web y es crucial para asegurar que el contenido se presente de manera consistente y accesible en diferentes navegadores y dispositivos.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="elementos_semánticos">
+        <header>Elementos Semánticos</header>
+        <p>Los elementos semánticos son aquellos que tienen un significado inherente y ayudan a describir el tipo de contenido que contienen. Estos elementos no solo mejoran la accesibilidad y la experiencia del usuario, sino que también facilitan la interpretación de la página por parte de los motores de búsqueda y las tecnologías de asistencia, como los lectores de pantalla.</p>
+        <p>En el ejemplo:</p>
+        <pre><code>
+  &lt;article&gt;
+      &lt;h1&gt;Titular del Artículo&lt;/h1&gt;
+      &lt;p>Contenido del artículo...&lt;/p&gt;
+  &lt;/article&gt;
+          </code></pre>
+        <p>Se utiliza el elemento &lt;article&gt;, que es un elemento semántico que representa un componente independiente de contenido que tiene sentido por sí mismo, como un post de blog, una noticia o un comentario. En este caso, el &lt;article&gt; contiene un título (&lt;h1&gt;) y un párrafo (&lt;p&gt;), que juntos conforman el contenido completo del artículo.</p>
+        <p>Los elementos semánticos como &lt;article&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;aside&gt;, &lt;header&gt;, &lt;footer&gt;, entre otros, proporcionan una estructura clara y significativa al contenido, lo que facilita la navegación y la comprensión tanto para los humanos como para las máquinas. Además, estos elementos pueden ser estilizados y manipulados de manera más precisa con CSS y JavaScript, lo que permite un mayor control sobre la presentación y funcionalidad de la página web.
+        </p>
+      </section>
+      <section class="main-section" id="listas">
+        <header>Listas</header>
+        <p>Las listas en HTML pueden ser ordenadas (&lt;ol>) o desordenadas (&lt;ul>), y cada elemento de la lista se envuelve en un &lt;li>.
+<br>Ejemplo:</p>
+        <pre><code>
+  &lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li>&gt;
+  &lt;/ul&gt;
+        </code></pre>
+      </section>
+      <section class="main-section" id="enlaces_e_imágenes">
+        <header>Enlaces e Imágenes</header>
+        <p>Dos elementos fundamentales en HTML que permiten la interacción y la presentación de contenido multimedia en una página web.</p>
+        <p>Los enlaces (&lt;a&gt;) son elementos que permiten la navegación entre páginas web o a diferentes secciones de la misma página. Se definen con el atributo href, que especifica la URL a la que apunta el enlace. El texto o contenido dentro del elemento &lt;a> se convierte en un hipervínculo interactivo que los usuarios pueden hacer clic para acceder al destino.</p>
+        <p>Las imágenes (&lt;img&gt;) son elementos incrustados que permiten mostrar gráficos y fotos en una página web. Se definen con el atributo src, que especifica la ruta o URL de la imagen que se va a mostrar. También es importante incluir el atributo alt, que proporciona una descripción textual de la imagen para casos en los que la imagen no se puede cargar o para lectores de pantalla que ayudan a las personas con discapacidades visuales.</p>
+        <p>En el ejemplo:</p>
+        <pre><code>
+  &lt;a href="https://www.ejemplo.com"&gt;Visita Ejemplo.com&lt;/a&gt;
+  &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+        </code></pre>
+        <p>Se muestra cómo se crea un enlace a otra página web y cómo se inserta una imagen en la página actual. El enlace lleva al usuario a "https://www.ejemplo.com" cuando hacen clic en "Visita Ejemplo.com". En el caso de la imagen se carga desde el archivo "imagen.jpg" y se describe como "Descripción de la imagen" para los lectores de pantalla y en caso de que la imagen no se pueda cargar.</p>
+<p>Estos elementos son esenciales para la creación de páginas web interactivas y accesibles, y su uso correcto mejora la experiencia del usuario y la optimización de motores de búsqueda (SEO).</p>
+      </section>
+      <section class="main-section" id="formularios">
+        <header>Formularios</header>
+        <p>Los formularios (&lt;form&gt;) permiten recoger datos del usuario a través de campos de entrada (&lt;input&gt;, &lt;textarea&gt;, etc.) y botones de acción (&lt;button&gt;, &lt;submit&gt;).</p>
+        <p>Permiten recopilar información del usuario a través de una interfaz web. Los formularios son una parte integral de muchas aplicaciones web y sitios web, ya que proporcionan una forma de enviar datos a un servidor para su procesamiento, almacenamiento o visualización.</p>
+        <p>Aquí hay cinco buenas prácticas al estructurar un formulario en HTML:</p>
+        <ul>
+          <li>Uso de Etiquetas (&lt;label&gt;): Proporcionar etiquetas claras y descriptivas para cada campo de entrada para que los usuarios comprendan qué información se espera que ingresen.</li>
+          <li>Validación del Lado del Cliente: Utilizar atributos como pattern y required para validar la entrada del usuario antes de enviar el formulario, reduciendo así las solicitudes innecesarias al servidor.</li>
+          <li>Accesibilidad: Asegurarse de que todos los elementos del formulario sean accesibles, utilizando atributos como aria-* para mejorar la navegación con tecnologías de asistencia.</li>
+          <li>Grupos de Botones: Agrupar botones relacionados con &lt;fieldset&gt; y &lt;legend&gt; para mejorar la organización y la accesibilidad.</li>
+          <li>Uso de Placeholders: Utilizar placeholders (placeholder attribute) para dar pistas sobre el formato esperado de la entrada, pero evitar confiar únicamente en ellos para la validación.</li>
+        </ul>
+        <p>En el ejemplo:</p>
+        <pre><code>
+  &lt;form action="/ruta-al-servidor" method="post"&gt;
+    &lt;label for="nombre">Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+  &lt;/form&gt;
+          </code></pre>
+        <p>Se muestra un formulario simple con un campo de entrada para el nombre del usuario y un botón de envío. El atributo action especifica la URL a la que se enviarán los datos del formulario cuando se haga clic en el botón de envío, y el atributo method indica que los datos se enviarán mediante el método HTTP POST.</p>
+        <p>El elemento &lt;label&gt; está asociado con el campo de entrada mediante el atributo for, que coincide con el valor del atributo id del campo de entrada. Esto mejora la accesibilidad al permitir que los usuarios seleccionen el campo de entrada haciendo clic en la etiqueta. El botón de envío (&lt;input type="submit"&gt;) es el elemento que permite al usuario enviar el formulario.</p>
+        <p>Siguiendo estas buenas prácticas, se puede crear un formulario HTML que sea fácil de usar, accesible y eficiente en términos de rendimiento y experiencia del usuario.</p>  
+
+      </section>
+      <section class="main-section" id="tablas">
+        <header>Tablas</header>
+        <p>Las tablas (&lt;table&gt;) se utilizan para presentar datos en filas y columnas, con elementos como &lt;tr&gt; para filas, &lt;th&gt; para encabezados y &lt;td&gt;   para celdas de datos.</p>
+        <p>En este ejemplo:</p>
+        <pre><code>
+          <table>
+    <tr>
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+    </tr>
+    <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+    </tr>
+</table>
+
+          </code></pre>
+        <p>Se realizó con el siguiente código</p>
+        <pre><code>
+  &lt;table>
+    &lt;tr>
+        &lt;th>Encabezado 1</th>
+        &lt;th>Encabezado 2</th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Dato 1</td>
+        &lt;td>Dato 2</td>
+    &lt;/tr>
+  &lt;/table>
+          </code></pre>
+      </section>
+      <section class="main-section" id="accesibilidad_y_semántica">
+        <header>Accesibilidad y Semántica</header>
+        <p>Destaca la importancia de utilizar elementos HTML de manera semántica y de considerar la accesibilidad al diseñar y estructurar una página web. La semántica se refiere a la elección de elementos HTML que transmiten el significado del contenido, mientras que la accesibilidad se centra en garantizar que la página web sea utilizable por todas las personas, independientemente de sus habilidades físicas o sensoriales.</p>
+        <p>En el ejemplo:</p>
+        <pre><code>
+  &lt;header&gt;
+    &lt;h1&gt;Logo de la Empresa&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#acerca"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+         </code></pre>
+        <p>Se observan varias prácticas de semántica y accesibilidad:</p>
+        <ul>
+          <li>Elemento &lt;header&gt;: Este elemento semántico se utiliza para contener el contenido introductorio o de navegación principal de una sección o página. En este caso, el &lt;header&gt; contiene el logo de la empresa y la navegación principal.</li>
+          <li>Elemento &lt;h1&gt;: Representa el título principal de la página o sección. En este ejemplo, el &lt;h1&gt; se utiliza para el logo de la empresa, que es un título importante que identifica la marca.
+</li>
+          <li>Elemento &lt;nav&gt;: Este elemento semántico se utiliza para agrupar los principales enlaces de navegación de la página. En este caso, contiene una lista desordenada (&lt;ul&gt;) con enlaces a diferentes secciones de la página.</li>
+          <li>Elemento &lt;ul&gt; y &lt;li&gt;: La lista desordenada (&lt;ul&gt;) se utiliza para agrupar los elementos de la lista (&lt;li&gt;), que en este caso son los enlaces de navegación.</li>
+          <li>Elemento &lt;a&gt;: Los enlaces (&lt;a&gt;) permiten a los usuarios navegar a diferentes partes de la página o a otras páginas web. Los atributos href especifican la ubicación a la que apuntan los enlaces.</li>
+        </ul>
+        <p>Al utilizar estos elementos semánticamente, se mejora la accesibilidad al permitir que las tecnologías de asistencia, como los lectores de pantalla, interpreten la estructura de la página y presenten la información de manera coherente. Además, los motores de búsqueda pueden entender mejor el contenido y su relevancia, lo que puede afectar el ranking de la página en los resultados de búsqueda.</p>
+        <p>En resumen, el ejemplo demuestra cómo la semántica y la accesibilidad pueden trabajar juntas para crear una página web que sea fácil de usar y entender para todos los usuarios, y que sea amigable con los motores de búsqueda.</p>
+      </section>
+    </main>
+  </div>
+  </body>
+</html>
